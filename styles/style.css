@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    background-color: #F2EAE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 16px;
+}
+
+.card__title {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1C232B;
+}
+
+.card__subtitle {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+    color: #6C7289;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 295px;
+    height: 48px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: #3D8168;
+    color: white;
+    gap: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.card__button:hover {
+    background-color: #1A4032;
+}
+
+.card__button > img {
+    height: auto;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    /* max-width: 600px; */
+    background-color: #FFF;
+    border-radius: 12px;
+}
+
+.card__img-container  {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    overflow: hidden;
+}
+
+
+.card__content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+}
+
+.card__price-container {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+#description {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4375rem;
+    color: #6C7289;
+}
+
+#price {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3D8168;
+}
+
+#old-price {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #6C7289;
+}
+
+
+@media screen and (min-width: 560px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .card__img-container {
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        width: 300px;
+    }
+
+    .card__content-container {
+        width: 300px;
+        justify-content: space-between;
+    }
+
+    .card__content-container button {
+        width: 236px;
+    }
+
+}
